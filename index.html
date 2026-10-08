@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BASILIC — Haute Gastronomie Minimaliste | Tashkent</title>
+  <meta name="description" content="Basilic — European three-star Michelin heritage and Mediterranean gastronomy in the center of Tashkent.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="BASILIC — Haute Gastronomie Minimaliste">
+  <meta property="og:description" content="A Pure Expression of Mediterranean Soul & European Artistry. Tashkent City.">
+  <meta property="og:image" content="assets/images/hero.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Playfair Display (Regular 400) & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link rel="stylesheet" href="css/aos.css">
+
+  <!-- Primary Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="nav-inner">
+        <!-- Brand Title -->
+        <a href="#home" class="brand-wrap" id="brandWrap">
+          <span class="brand-title">Basilic</span>
+          <span class="brand-location">· Tashkent</span>
+        </a>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active" data-i18n="navHome">Home</a></li>
+          <li><a href="#menu" class="nav-link" data-i18n="navMenu">Menu</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="navAbout">About</a></li>
+          <li><a href="#reservations" class="nav-link" data-i18n="navReservations">Reservations</a></li>
+        </ul>
+
+        <!-- Action Controls -->
+        <div class="nav-actions">
+          <!-- Language Selector -->
+          <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="uz">UZ</button>
+            <button class="lang-btn" data-lang="ru">RU</button>
+          </div>
+
+          <!-- Reserve CTA -->
+          <a href="#reservations" class="btn btn-primary btn-sm" data-i18n="btnReserve">Reserve a Table</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME HERO SECTION -->
+    <section class="home-hero" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div data-aos="fade-up" data-aos-duration="1000">
+            <span class="eyebrow" data-i18n="heroEyebrow">EST. 2024 · TASHKENT · HAUTE GASTRONOMIE</span>
+            <h1 class="display-lg hero-title" data-i18n="heroHeadline">
+              A Pure Expression of Mediterranean Soul & European Artistry.
+            </h1>
+            <p class="hero-subtext" data-i18n="heroSubtitle">
+              Welcome to Basilic—where seasonal provenance, quiet architectural luxury, and timeless culinary craft converge in the center of Tashkent.
+            </p>
+            <div class="hero-cta-group">
+              <a href="#reservations" class="btn btn-primary" data-i18n="btnReserve">Reserve a Table</a>
+              <a href="#menu" class="btn btn-outline" data-i18n="btnMenu">Explore Menu</a>
+            </div>
+          </div>
+
+          <div class="hero-img-frame" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+            <img src="assets/images/hero.jpg" alt="Basilic Panoramic Dining Hall" class="hero-img">
+            <div class="hero-img-caption">
+              <span>Main Dining Room · Architectural Panorama</span>
+              <span>Tashkent City</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUR CORE PILLARS SECTION -->
+    <section class="section-padding pillars-section" id="pillars">
+      <div class="container" data-aos="fade-up">
+        <div class="section-head">
+          <span class="eyebrow">OUR FOUNDATION</span>
+          <h2 class="headline-lg">The Four Pillars of Basilic</h2>
+        </div>
+      </div>
+      <div class="container">
+        <div class="pillars-grid" id="pillarsGrid">
+          <!-- Populated dynamically via js/app.js with data-aos animations -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CULINARY HIGHLIGHTS SECTION -->
+    <section class="section-padding highlights-section" id="highlights">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">SIGNATURE CREATIONS</span>
+          <h2 class="headline-lg">Curated Highlights</h2>
+          <p class="body-md">Selected tasting courses honoring seasonal harvests and impeccable European technique.</p>
+        </div>
+
+        <div class="highlights-grid">
+          <!-- Burrata -->
+          <div class="highlight-item" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/images/burrata.jpg" alt="Burrata di Puglia" class="highlight-thumb">
+            <div>
+              <div class="highlight-meta">
+                <h3 class="highlight-title">Burrata di Puglia</h3>
+                <span class="price-tag">180 000 UZS</span>
+              </div>
+              <p class="highlight-desc">Creamy artisanal Pugliese burrata, heirloom tomatoes, aged balsamic reduction, and fresh sweet basil leaves.</p>
+              <div class="highlight-tags">
+                <span class="tag-badge">[V]</span>
+                <span class="tag-badge">[GF]</span>
+                <span class="tag-badge">Chef's Choice</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chilean Sea Bass -->
+          <div class="highlight-item" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/images/seabass.jpg" alt="Chilean Sea Bass" class="highlight-thumb">
+            <div>
+              <div class="highlight-meta">
+                <h3 class="highlight-title">Chilean Sea Bass</h3>
+                <span class="price-tag">460 000 UZS</span>
+              </div>
+              <p class="highlight-desc">Glazed sea bass fillet, white miso reduction, wild asparagus spears, and cold-pressed citrus-olive emulsion.</p>
+              <div class="highlight-tags">
+                <span class="tag-badge">[GF]</span>
+                <span class="tag-badge">Wild Harvest</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Australian Prime Ribeye -->
+          <div class="highlight-item" data-aos="fade-up" data-aos-delay="300">
+            <img src="assets/images/ribeye.jpg" alt="Australian Prime Ribeye" class="highlight-thumb">
+            <div>
+              <div class="highlight-meta">
+                <h3 class="highlight-title">Australian Prime Ribeye 300g</h3>
+                <span class="price-tag">490 000 UZS</span>
+              </div>
+              <p class="highlight-desc">28-day dry-aged Australian grain-fed ribeye prepared in our charcoal Josper oven, roasted garlic, and rosemary sprig.</p>
+              <div class="highlight-tags">
+                <span class="tag-badge">Josper Grill</span>
+                <span class="tag-badge">Dry-Aged</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Signature Pavlova -->
+          <div class="highlight-item" data-aos="fade-up" data-aos-delay="400">
+            <img src="assets/images/pavlova.jpg" alt="Signature Pavlova" class="highlight-thumb">
+            <div>
+              <div class="highlight-meta">
+                <h3 class="highlight-title">Signature Pavlova</h3>
+                <span class="price-tag">135 000 UZS</span>
+              </div>
+              <p class="highlight-desc">Crisp meringue shell, Madagascar vanilla mascarpone chantilly, forest berries, passionfruit coulis, and gold flakes.</p>
+              <div class="highlight-tags">
+                <span class="tag-badge">[V]</span>
+                <span class="tag-badge">[GF]</span>
+                <span class="tag-badge">Pastry Atelier</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXECUTIVE CHEF QUOTE SECTION -->
+    <section class="chef-quote-section" data-aos="fade-in" data-aos-duration="1200">
+      <div class="container">
+        <div class="quote-wrap">
+          <blockquote class="quote-text" data-i18n="chefQuote">
+            “Great cuisine is not about masking ingredients; it is about having the courage to reveal their truest character.”
+          </blockquote>
+          <div class="quote-author" data-i18n="chefAuthor">
+            Executive Chef Marco V. · European Three-Star Heritage
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESTAURANT ATMOSPHERE / ASYMMETRIC GALLERY -->
+    <section class="section-padding gallery-section" id="atmosphere">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">THE SANCTUARY</span>
+          <h2 class="headline-lg">Quiet Luxury & Spatial Harmony</h2>
+          <p class="body-md">Architectural stone, custom walnut fixtures, and acoustic tranquility.</p>
+        </div>
+
+        <div class="asymmetric-gallery">
+          <div class="gallery-card" data-aos="fade-right" data-aos-duration="1000">
+            <img src="assets/images/lounge.jpg" alt="Emerald Velvet Lounge Bar">
+            <div class="gallery-caption">
+              <div>
+                <strong style="display: block; font-family: var(--font-serif); font-size: 1.1rem;">Emerald Velvet Lounge & Cellar</strong>
+                <span style="font-size: 0.78rem; color: var(--color-text-secondary);">Curated spirits, vintage Coravin allocations & vinyl jazz</span>
+              </div>
+              <span class="label-sm">Salons</span>
+            </div>
+          </div>
+
+          <div class="gallery-card" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150">
+            <img src="assets/images/hero.jpg" alt="Panoramic Main Dining Room">
+            <div class="gallery-caption">
+              <div>
+                <strong style="display: block; font-family: var(--font-serif); font-size: 1.1rem;">Panoramic Dining Salon</strong>
+                <span style="font-size: 0.78rem; color: var(--color-text-secondary);">Generous 12-column spacing and discreet table appointments</span>
+              </div>
+              <span class="label-sm">Dining Room</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIVATE DINING CALLOUT -->
+    <section class="section-padding" style="background: var(--color-canvas-alt); border-bottom: 1px solid var(--border-hairline);">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+          <div data-aos="fade-right">
+            <span class="eyebrow">EXCLUSIVE SALONS</span>
+            <h2 class="headline-lg" style="margin-bottom: 1.5rem;" data-i18n="privateDiningTitle">Private Dining & Executive Salons</h2>
+            <p class="body-lg" style="margin-bottom: 2rem;" data-i18n="privateDiningDesc">
+              Bespoke tasting courses, sommelier cellar pairings, and discreet accommodations tailored for high-level delegations, celebrations, and intimate gatherings.
+            </p>
+            <a href="#reservations" class="btn btn-primary">Discover Private Dining →</a>
+          </div>
+          <div style="border: 1px solid var(--border-hairline); padding: 12px; background: #FFFFFF;" data-aos="fade-left" data-aos-delay="150">
+            <img src="assets/images/lounge.jpg" alt="Private Dining Salon" style="width: 100%; height: 360px; object-fit: cover; display: block;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPREHENSIVE DEDICATED MENU PAGE -->
+    <section class="section-padding" id="menu">
+      <div class="container">
+        <div class="section-head centered" data-aos="fade-up">
+          <span class="eyebrow" data-i18n="menuEyebrow">GASTRONOMIE EUROPÉENNE</span>
+          <h2 class="display-lg" data-i18n="menuTitle">Our Menu</h2>
+          <p class="body-lg" style="max-width: 620px; margin: 1rem auto 0 auto;" data-i18n="menuSubtitle">
+            Thoughtfully crafted dishes using exceptional seasonal ingredients and centuries-old culinary heritage.
+          </p>
+        </div>
+
+        <!-- Degustation Feature Box -->
+        <div class="degustation-banner" data-aos="fade-up" data-aos-duration="1000">
+          <div>
+            <span class="label-md">EXECUTIVE TASTING EXPERIENCE</span>
+            <h3 class="headline-md" style="margin: 0.5rem 0;" data-i18n="degustationTitle">Degustation 6-Course Menu</h3>
+            <p class="body-md" data-i18n="degustationSubtitle">Curated by the Executive Chef with Optional Sommelier Cellar Pairing</p>
+            <ul class="degustation-courses">
+              <li>Pugliese Burrata & Heirloom Tartare</li>
+              <li>Handmade Black Truffle Tagliolini</li>
+              <li>Wild Chilean Sea Bass Miso Glacé</li>
+              <li>Charcoal Josper Prime Ribeye 120g</li>
+              <li>Artisanal Bronte Pistachio Granita</li>
+              <li>Signature Gold Leaf Pavlova Meringue</li>
+            </ul>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-family: var(--font-serif); font-size: 2.2rem; color: var(--color-charcoal);" data-i18n="degustationPrice">850 000 UZS</div>
+            <span class="body-sm" style="display: block; margin-bottom: 1.5rem;">per guest · wine pairing optional</span>
+            <a href="#reservations" class="btn btn-primary btn-sm">Reserve Degustation</a>
+          </div>
+        </div>
+
+        <!-- Sticky Filter Tabs -->
+        <div class="menu-sticky-nav" data-aos="fade-up">
+          <div class="menu-tabs-bar">
+            <button class="menu-tab-btn active" data-category="all" data-i18n="filterAll">All Courses</button>
+            <button class="menu-tab-btn" data-category="starters" data-i18n="filterStarters">Starters & Crudo</button>
+            <button class="menu-tab-btn" data-category="seafood" data-i18n="filterSeafood">Seafood & Fish</button>
+            <button class="menu-tab-btn" data-category="grill" data-i18n="filterGrill">Josper Grill & Steaks</button>
+            <button class="menu-tab-btn" data-category="pasta" data-i18n="filterPasta">Pasta & Risotto</button>
+            <button class="menu-tab-btn" data-category="mains" data-i18n="filterMains">Main Courses</button>
+            <button class="menu-tab-btn" data-category="desserts" data-i18n="filterDesserts">Pastry & Desserts</button>
+            <button class="menu-tab-btn" data-category="drinks" data-i18n="filterDrinks">Bar & Cellar</button>
+          </div>
+        </div>
+
+        <!-- Course Ledger Grid -->
+        <div class="menu-courses-grid" id="menuFolioGrid" style="margin-top: 3rem;">
+          <!-- Dynamically populated via js/app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="section-padding" style="background: var(--color-surface-dim); border-top: 1px solid var(--border-hairline); border-bottom: 1px solid var(--border-hairline);" id="about">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">HERITAGE & CRAFT</span>
+          <h2 class="display-lg">A Symphony of Mediterranean Soul & European Precision.</h2>
+          <p class="body-lg" style="margin-top: 1rem;">Founded on the belief that dining is an art form of hospitality, intention, and seasonal purity.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem;">
+          <div style="border: 1px solid var(--border-hairline); padding: 12px; background: #FFFFFF;" data-aos="fade-right">
+            <img src="assets/images/hero.jpg" alt="Basilic Interior Architecture" style="width: 100%; height: 420px; object-fit: cover; display: block;">
+          </div>
+          <div data-aos="fade-left" data-aos-delay="150">
+            <h3 class="headline-md" style="margin-bottom: 1.2rem;">Our Story</h3>
+            <p class="body-md" style="margin-bottom: 1.2rem;">
+              Basilic was conceived as an unhurried sanctuary in the energetic heart of Tashkent. Drawing inspiration from Mediterranean coastal villas, Parisian culinary discipline, and high-modern architectural restraint, our space provides a calm refuge for guests who appreciate exacting craft.
+            </p>
+            <p class="body-md">
+              From our custom charcoal Josper ovens to temperature-regulated wine cellars, every detail is engineered to let ingredients express their highest natural state without compromise.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEDICATED RESERVATION SECTION -->
+    <section class="section-padding" id="reservations">
+      <div class="container">
+        <div class="section-head centered" data-aos="fade-up">
+          <span class="eyebrow" data-i18n="resEyebrow">ONLINE CONCIERGE</span>
+          <h2 class="display-lg" data-i18n="resTitle">Reserve a Table</h2>
+          <p class="body-lg" style="max-width: 660px; margin: 1rem auto 0 auto;" data-i18n="resSubtitle">
+            We look forward to welcoming you. For parties larger than 8 or bespoke private dining inquiries, our concierge is at your service.
+          </p>
+        </div>
+
+        <div class="reservation-layout">
+          <!-- Left Column: Booking Form -->
+          <div class="res-form-col" data-aos="fade-right" data-aos-duration="1000">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2rem; border-bottom: 1px solid var(--border-hairline); padding-bottom: 1rem;">
+              <span class="label-md">STEP 1 OF 2</span>
+              <span class="body-sm" data-i18n="resStep1">Table & Schedule Selection</span>
+            </div>
+
+            <form id="conciergeResForm">
+              <input type="hidden" id="inputGuests" value="2 Guests">
+              <input type="hidden" id="inputTime" value="19:30">
+
+              <!-- Guests Selector -->
+              <div class="form-group">
+                <label class="form-label" data-i18n="resGuestsLabel">Number of Guests</label>
+                <div class="pill-grid">
+                  <button type="button" class="pill-btn guest-pill" data-val="1 Guest">1 Guest</button>
+                  <button type="button" class="pill-btn guest-pill active" data-val="2 Guests">2 Guests</button>
+                  <button type="button" class="pill-btn guest-pill" data-val="3 Guests">3 Guests</button>
+                  <button type="button" class="pill-btn guest-pill" data-val="4 Guests">4 Guests</button>
+                  <button type="button" class="pill-btn guest-pill" data-val="5 Guests">5 Guests</button>
+                  <button type="button" class="pill-btn guest-pill" data-val="6 Guests">6 Guests</button>
+                  <button type="button" class="pill-btn guest-pill" data-val="Large Party 8+">8+ Guests</button>
+                </div>
+              </div>
+
+              <!-- Date Picker -->
+              <div class="form-group">
+                <label class="form-label" for="resDate" data-i18n="resDateLabel">Select Date</label>
+                <input type="date" id="resDate" class="form-input" required>
+              </div>
+
+              <!-- Time Slot Grid -->
+              <div class="form-group">
+                <label class="form-label" data-i18n="resTimeLabel">Dining Time Slot</label>
+                <span style="font-size: 0.72rem; color: var(--color-sage); display: block; margin-bottom: 6px;">Dinner & Evening Service</span>
+                <div class="time-slots-grid">
+                  <button type="button" class="time-btn" data-time="18:00">18:00</button>
+                  <button type="button" class="time-btn" data-time="18:30">18:30</button>
+                  <button type="button" class="time-btn" data-time="19:00">19:00</button>
+                  <button type="button" class="time-btn active" data-time="19:30">19:30</button>
+                  <button type="button" class="time-btn" data-time="20:00">20:00</button>
+                  <button type="button" class="time-btn" data-time="20:30">20:30</button>
+                  <button type="button" class="time-btn" data-time="21:00">21:00</button>
+                  <button type="button" class="time-btn" data-time="21:30">21:30</button>
+                </div>
+              </div>
+
+              <!-- Seating Preference -->
+              <div class="form-group">
+                <label class="form-label" for="resZone" data-i18n="resZoneLabel">Seating Preference</label>
+                <select id="resZone" class="form-select">
+                  <option value="Main Dining Room (Panoramic)">Main Dining Room (Panoramic)</option>
+                  <option value="Olive Garden Conservatory">Olive Garden Conservatory</option>
+                  <option value="Emerald Lounge & Bar">Emerald Lounge & Bar</option>
+                  <option value="Chef's Counter">Chef's Tasting Counter</option>
+                </select>
+              </div>
+
+              <!-- Guest Name & Phone -->
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                <div class="form-group">
+                  <label class="form-label" for="resGuestName" data-i18n="resNameLabel">Full Name</label>
+                  <input type="text" id="resGuestName" class="form-input" placeholder="e.g. Jasur Alimov" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="resGuestPhone" data-i18n="resPhoneLabel">Phone Number</label>
+                  <input type="tel" id="resGuestPhone" class="form-input" placeholder="+998 (90) 000-00-00" required>
+                </div>
+              </div>
+
+              <!-- Notes -->
+              <div class="form-group">
+                <label class="form-label" for="resNotes" data-i18n="resNotesLabel">Occasion & Dietary Preferences</label>
+                <textarea id="resNotes" class="form-textarea" rows="2" placeholder="Birthday, anniversary, quiet window table, dietary notes..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="resSubmitBtn">
+                Request a Reservation →
+              </button>
+            </form>
+          </div>
+
+          <!-- Right Column: Concierge Info -->
+          <div class="res-concierge-col" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150">
+            <div>
+              <span class="eyebrow">HOSPITALITY PROTOCOL</span>
+              <h3 class="headline-md" style="margin-bottom: 1.5rem;">Direct Concierge Desk</h3>
+              
+              <div style="margin-bottom: 2rem;">
+                <img src="assets/images/hero.jpg" alt="Concierge Desk" style="width: 100%; height: 220px; object-fit: cover; border: 1px solid var(--border-hairline);">
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 1.2rem; margin-bottom: 2rem;">
+                <div>
+                  <span class="label-sm">Location</span>
+                  <div style="font-size: 0.92rem; font-weight: 500;">O'qchi Street 1A, Tashkent City, Shaykhontokhur district, Tashkent</div>
+                </div>
+                <div>
+                  <span class="label-sm">Telephone</span>
+                  <div style="font-size: 0.92rem; font-weight: 500;">+998 (78) 333-83-33</div>
+                </div>
+                <div>
+                  <span class="label-sm">Email</span>
+                  <div style="font-size: 0.92rem; font-weight: 500;">concierge@basilic.uz</div>
+                </div>
+                <div>
+                  <span class="label-sm">Operating Hours</span>
+                  <div style="font-size: 0.92rem; font-weight: 500;">Monday — Sunday: 08:00 to 02:00 (Kitchen closes at 00:30)</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Etiquette Card -->
+            <div class="etiquette-card">
+              <h4>Dining Etiquette & Notes</h4>
+              <ul>
+                <li>· Smart casual to formal attire appreciated (athletic wear discouraged).</li>
+                <li>· Table holding policy: Reservations are held for 20 minutes past booking.</li>
+                <li>· Soft live acoustic and vinyl jazz from 19:30 onwards.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CONFIRMATION MODAL -->
+  <div class="modal-overlay" id="resModalOverlay">
+    <div class="modal-window">
+      <button class="modal-close" id="modalCloseBtn">&times;</button>
+      <span class="label-sm" style="display: block; margin-bottom: 1rem;">ONLINE CONCIERGE CONFIRMATION</span>
+      <h3 class="headline-md" style="margin-bottom: 1rem;" data-i18n="successTitle">Reservation Received</h3>
+      <p id="modalConfirmationDetails" class="body-md" style="margin-bottom: 2rem;" data-i18n="successDesc">
+        Thank you. Our hospitality concierge will contact you promptly to finalize your table arrangements.
+      </p>
+      <button class="btn btn-primary" id="modalDoneBtn" style="width: 100%;">Understood</button>
+    </div>
+  </div>
+
+  <!-- TOAST BAR -->
+  <div class="toast-bar" id="toastBar">
+    Notification
+  </div>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer" data-aos="fade-up">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-wrap" style="margin-bottom: 1.2rem;">
+            <span class="brand-title">Basilic</span>
+            <span class="brand-location">· Tashkent</span>
+          </div>
+          <p class="body-sm" style="line-height: 1.8;">
+            A sanctuary of European three-star Michelin gastronomy and Mediterranean hospitality in the center of Tashkent City.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#reservations">Reservations</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Hours</h4>
+          <ul>
+            <li>Monday — Sunday: 08:00 — 02:00</li>
+            <li>Breakfast: 08:00 — 12:00</li>
+            <li>Lunch: 12:00 — 16:00</li>
+            <li>Dinner: 18:00 — 00:30</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Concierge & Desk</h4>
+          <ul>
+            <li>O'qchi Street 1A, Tashkent City</li>
+            <li>+998 (78) 333-83-33</li>
+            <li>concierge@basilic.uz</li>
+            <li style="margin-top: 0.5rem; display: flex; gap: 15px;">
+              <a href="#" style="font-weight: 600;">Instagram</a>
+              <a href="#" style="font-weight: 600;">Telegram</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 BASILIC Tashkent. All rights reserved.</div>
+        <div style="display: flex; gap: 24px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Hospitality</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

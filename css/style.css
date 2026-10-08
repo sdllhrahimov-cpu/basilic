@@ -1,0 +1,1092 @@
+/* ===================================================================
+   BASILIC — HAUTE GASTRONOMIE MINIMALISTE DESIGN SYSTEM
+   100% 1-to-1 Fidelity with Google Stitch Design System
+   =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+:root {
+  /* Color Tokens */
+  --color-canvas: #F7F6F1;
+  --color-canvas-alt: #FAF9F4;
+  --color-surface: #FFFFFF;
+  --color-surface-dim: #EFECE6;
+  --color-surface-container: #F5F4EF;
+  
+  --color-charcoal: #171817;
+  --color-primary: #171817;
+  --color-basil: #3D4A37;
+  --color-secondary: #3D4A37;
+  --color-sage: #66745D;
+  --color-tertiary: #66745D;
+  --color-gold: #B89B6A;
+
+  --color-text-primary: #171817;
+  --color-text-secondary: #444845;
+  --color-text-muted: #757874;
+
+  --border-hairline: #DDDCD5;
+  --border-subtle: #DDDCD5;
+  --border-dark: #171817;
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Sharp Shape Language: Strictly 0px (as per Stitch design system) */
+  --radius-sharp: 0px;
+
+  /* Spacing */
+  --container-max: 1400px;
+  --gutter: 2rem;
+  --space-xs: 0.25rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.5rem;
+  --space-lg: 3rem;
+  --space-xl: 5rem;
+
+  --shadow-whisper: 0 20px 40px -15px rgba(23, 24, 23, 0.04);
+  --transition-smooth: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 !important; /* Strict sharp architectural minimalism */
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--color-canvas);
+  color: var(--color-text-primary);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-canvas);
+  color: var(--color-text-primary);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-canvas);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-hairline);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-charcoal);
+}
+
+/* Typography Hierarchy strictly as defined in Stitch DESIGN.md */
+h1, h2, h3, h4, .serif-display {
+  font-family: var(--font-serif);
+  font-weight: 400; /* Stitch rule: standard regular 400 weight for airiness and finesse */
+  color: var(--color-charcoal);
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+.display-lg {
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.headline-lg {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.headline-md {
+  font-size: clamp(1.5rem, 2.2vw, 1.9rem);
+  line-height: 1.3;
+}
+
+.headline-sm {
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+
+.title-lg {
+  font-family: var(--font-sans);
+  font-size: 1.12rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.title-md {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.body-lg {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+}
+
+.body-md {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+.label-lg {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.label-md {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-sage);
+}
+
+.label-sm {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-sage);
+}
+
+.price-tag {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--color-charcoal);
+}
+
+/* Layout */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.2rem, 4vw, 3.5rem);
+  padding-right: clamp(1.2rem, 4vw, 3.5rem);
+}
+
+.section-padding {
+  padding-top: clamp(4rem, 7vw, 7rem);
+  padding-bottom: clamp(4rem, 7vw, 7rem);
+}
+
+.section-head {
+  max-width: 720px;
+  margin-bottom: 3.5rem;
+}
+
+.section-head.centered {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.eyebrow {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-sage);
+  margin-bottom: 1rem;
+}
+
+/* Header & Nav */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(247, 246, 241, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-hairline);
+  transition: all var(--transition-smooth);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 86px;
+}
+
+.site-header.scrolled {
+  background: #FAF9F4;
+  border-bottom: 1px solid var(--color-charcoal);
+}
+
+.brand-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.brand-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--color-charcoal);
+}
+
+.brand-location {
+  font-size: 0.65rem;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-sage);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  list-style: none;
+}
+
+.nav-link {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 6px 0;
+  position: relative;
+  transition: color var(--transition-smooth);
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--color-charcoal);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: var(--color-charcoal);
+  transition: width var(--transition-smooth);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+  width: 100%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+/* Language selector */
+.lang-switcher {
+  display: flex;
+  border: 1px solid var(--border-hairline);
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 6px 10px;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+}
+
+.lang-btn.active, .lang-btn:hover {
+  background: var(--color-charcoal);
+  color: #FAF9F6;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 36px; /* Exactly as defined in Stitch DESIGN.md */
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background: var(--color-charcoal);
+  color: #FAF9F6;
+  border-color: var(--color-charcoal);
+}
+
+.btn-primary:hover {
+  background: var(--color-basil);
+  border-color: var(--color-basil);
+  color: #FFFFFF;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-charcoal);
+  border-color: var(--color-charcoal);
+}
+
+.btn-outline:hover {
+  background: var(--color-surface-dim);
+}
+
+.btn-sm {
+  padding: 10px 20px;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+}
+
+.text-link {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-charcoal);
+  text-decoration: none;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--color-charcoal);
+  transition: all var(--transition-smooth);
+}
+
+.text-link:hover {
+  color: var(--color-basil);
+  border-bottom-color: var(--color-basil);
+}
+
+/* ===================================================================
+   HERO SECTION (HOME)
+   =================================================================== */
+.home-hero {
+  padding-top: 150px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid var(--border-hairline);
+  background: var(--color-canvas);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.hero-title {
+  margin-bottom: 1.8rem;
+  color: var(--color-charcoal);
+}
+
+.hero-subtext {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  max-width: 560px;
+  margin-bottom: 2.5rem;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.hero-img-frame {
+  position: relative;
+  border: 1px solid var(--border-hairline);
+  padding: 12px;
+  background: var(--color-surface);
+}
+
+.hero-img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-img-caption {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.68rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* ===================================================================
+   FOUR CORE PILLARS SECTION
+   =================================================================== */
+.pillars-section {
+  border-bottom: 1px solid var(--border-hairline);
+  background: var(--color-canvas-alt);
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--border-hairline);
+  border-left: 1px solid var(--border-hairline);
+}
+
+.pillar-card {
+  padding: 3rem 2rem;
+  border-right: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--border-hairline);
+  background: var(--color-canvas-alt);
+  transition: background var(--transition-smooth);
+}
+
+.pillar-card:hover {
+  background: var(--color-surface);
+}
+
+.pillar-num {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--color-sage);
+  letter-spacing: 0.16em;
+  margin-bottom: 1.5rem;
+}
+
+.pillar-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+  color: var(--color-charcoal);
+}
+
+.pillar-card p {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+/* ===================================================================
+   CULINARY HIGHLIGHTS (HOME)
+   =================================================================== */
+.highlights-section {
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.highlight-item {
+  border: 1px solid var(--border-hairline);
+  background: var(--color-surface);
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 2rem;
+  align-items: center;
+  transition: border-color var(--transition-smooth);
+}
+
+.highlight-item:hover {
+  border-color: var(--color-charcoal);
+}
+
+.highlight-thumb {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border: 1px solid var(--border-hairline);
+}
+
+.highlight-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.6rem;
+}
+
+.highlight-title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--color-charcoal);
+}
+
+.highlight-desc {
+  font-size: 0.86rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.highlight-tags {
+  display: flex;
+  gap: 8px;
+}
+
+.tag-badge {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-sage);
+  border: 1px solid var(--border-hairline);
+  padding: 3px 8px;
+  background: var(--color-canvas);
+}
+
+/* ===================================================================
+   CHEF & ASYMMETRIC STORY SECTION
+   =================================================================== */
+.chef-quote-section {
+  background: var(--color-surface-dim);
+  border-bottom: 1px solid var(--border-hairline);
+  padding: 6rem 0;
+}
+
+.quote-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quote-text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 2.8vw, 2.3rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-charcoal);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.quote-author {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--color-sage);
+}
+
+/* Atmosphere Gallery */
+.gallery-section {
+  border-bottom: 1px solid var(--border-hairline);
+}
+
+.asymmetric-gallery {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
+}
+
+.gallery-card {
+  position: relative;
+  border: 1px solid var(--border-hairline);
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.02);
+}
+
+.gallery-caption {
+  padding: 1.5rem;
+  background: var(--color-surface);
+  border-top: 1px solid var(--border-hairline);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/* ===================================================================
+   DEDICATED MENU PAGE & CATEGORY TABS
+   =================================================================== */
+.menu-page-header {
+  padding-top: 140px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid var(--border-hairline);
+  background: var(--color-canvas);
+}
+
+.menu-sticky-nav {
+  position: sticky;
+  top: 86px;
+  z-index: 900;
+  background: var(--color-canvas);
+  border-bottom: 1px solid var(--border-hairline);
+  padding: 1rem 0;
+}
+
+.menu-tabs-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.menu-tabs-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-tab-btn {
+  background: transparent;
+  border: 1px solid var(--border-hairline);
+  color: var(--color-text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  padding: 8px 18px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+}
+
+.menu-tab-btn.active, .menu-tab-btn:hover {
+  background: var(--color-charcoal);
+  color: #FAF9F6;
+  border-color: var(--color-charcoal);
+}
+
+/* Degustation Box */
+.degustation-banner {
+  border: 1px solid var(--border-hairline);
+  background: var(--color-surface);
+  padding: 3.5rem;
+  margin: 3.5rem 0;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.degustation-courses {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+  margin-top: 1.5rem;
+}
+
+.degustation-courses li {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.degustation-courses li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-sage);
+}
+
+/* Menu Ledger Grid */
+.menu-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.menu-folio-card {
+  border: 1px solid var(--border-hairline);
+  background: var(--color-surface);
+  padding: 2.5rem;
+  transition: border-color var(--transition-smooth);
+}
+
+.menu-folio-card:hover {
+  border-color: var(--color-charcoal);
+}
+
+.folio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-hairline);
+  padding-bottom: 0.8rem;
+}
+
+.folio-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--color-charcoal);
+}
+
+.folio-subtitle {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.88rem;
+  color: var(--color-sage);
+  margin-bottom: 0.8rem;
+}
+
+.folio-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+.folio-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===================================================================
+   TWO-COLUMN DEDICATED RESERVATION EXPERIENCE
+   =================================================================== */
+.reservation-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 4rem;
+  border: 1px solid var(--border-hairline);
+  background: var(--color-surface);
+}
+
+.res-form-col {
+  padding: 4rem;
+}
+
+.res-concierge-col {
+  background: var(--color-surface-dim);
+  border-left: 1px solid var(--border-hairline);
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-sage);
+  margin-bottom: 10px;
+}
+
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  height: 52px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-hairline);
+  padding: 0 16px;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--color-charcoal);
+  outline: none;
+  transition: border-color var(--transition-smooth);
+}
+
+.form-textarea {
+  height: auto;
+  padding: 14px 16px;
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--color-charcoal);
+}
+
+.pill-grid {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pill-btn {
+  background: #FFFFFF;
+  border: 1px solid var(--border-hairline);
+  color: var(--color-text-secondary);
+  padding: 10px 18px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+}
+
+.pill-btn.active, .pill-btn:hover {
+  background: var(--color-charcoal);
+  color: #FAF9F6;
+  border-color: var(--color-charcoal);
+}
+
+.time-slots-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.time-btn {
+  background: #FFFFFF;
+  border: 1px solid var(--border-hairline);
+  padding: 10px 6px;
+  font-size: 0.78rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-smooth);
+}
+
+.time-btn.active, .time-btn:hover {
+  background: var(--color-charcoal);
+  color: #FAF9F6;
+  border-color: var(--color-charcoal);
+}
+
+/* Etiquette Card in Reservation */
+.etiquette-card {
+  border: 1px solid var(--border-hairline);
+  background: var(--color-surface);
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.etiquette-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.etiquette-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+}
+
+/* ===================================================================
+   FOOTER
+   =================================================================== */
+.site-footer {
+  border-top: 1px solid var(--border-hairline);
+  background: var(--color-canvas);
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 3.5rem;
+  margin-bottom: 4rem;
+}
+
+.footer-col h4 {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-charcoal);
+  margin-bottom: 1.5rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-col a, .footer-col li {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  color: var(--color-charcoal);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border-hairline);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+/* Reservation Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(23, 24, 23, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-window {
+  background: #FFFFFF;
+  border: 1px solid var(--border-hairline);
+  box-shadow: var(--shadow-whisper);
+  max-width: 540px;
+  width: 100%;
+  padding: 3.5rem;
+  position: relative;
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* Toast */
+.toast-bar {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--color-charcoal);
+  color: #FAF9F6;
+  border: 1px solid var(--border-hairline);
+  padding: 14px 28px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  z-index: 3000;
+  transition: transform var(--transition-smooth);
+}
+
+.toast-bar.active {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+  .reservation-layout {
+    grid-template-columns: 1fr;
+  }
+  .res-concierge-col {
+    border-left: none;
+    border-top: 1px solid var(--border-hairline);
+  }
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .highlight-item {
+    grid-template-columns: 1fr;
+  }
+  .highlight-thumb {
+    height: 220px;
+  }
+  .menu-courses-grid {
+    grid-template-columns: 1fr;
+  }
+  .degustation-banner {
+    grid-template-columns: 1fr;
+  }
+  .res-form-col, .res-concierge-col {
+    padding: 2rem;
+  }
+  .time-slots-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
