@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sdllhrahimov-cpu.github.io/basilic/sitemap.xml

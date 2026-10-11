@@ -1,21 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BASILIC — Haute Gastronomie Minimaliste | Tashkent</title>
-  <meta name="description" content="Basilic — European three-star Michelin heritage and Mediterranean gastronomy in the center of Tashkent.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>BASILIC — Oliy Gastronomiya Minimalizm | Toshkent</title>
   
-  <!-- Open Graph -->
-  <meta property="og:title" content="BASILIC — Haute Gastronomie Minimaliste">
-  <meta property="og:description" content="A Pure Expression of Mediterranean Soul & European Artistry. Tashkent City.">
-  <meta property="og:image" content="assets/images/hero.jpg">
-  <meta property="og:type" content="website">
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Basilic — Yevropa uch yulduzli Michelin gastronomiyasi, O'rta yer dengizi ruhiyati va noalkogol mualliflik ichimliklari Toshkent City markazida. Stol band qilish va menyu.">
+  <meta name="keywords" content="Basilic restaurant, Basilic Toshkent, Toshkent restoran, Haute Gastronomie, Fine Dining Tashkent, Oliy Gastronomiya, Toshkent City restoran, Michelin restorani, Noalkogol restoran">
+  <meta name="author" content="BASILIC Tashkent">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://sdllhrahimov-cpu.github.io/basilic/">
 
-  <!-- Google Fonts: Playfair Display (Regular 400) & Manrope -->
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:url" content="https://sdllhrahimov-cpu.github.io/basilic/">
+  <meta property="og:title" content="BASILIC — Oliy Gastronomiya Minimalizm | Toshkent">
+  <meta property="og:description" content="O'rta Yer Dengizi Ruhiyati va Yevropa Mahoratining Sof Ifodasi. Toshkent City markazidagi osoyishta maskan.">
+  <meta property="og:image" content="https://sdllhrahimov-cpu.github.io/basilic/assets/images/hero.jpg">
+  <meta property="og:locale" content="uz_UZ">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="ru_RU">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BASILIC — Oliy Gastronomiya Minimalizm | Toshkent">
+  <meta name="twitter:description" content="O'rta Yer Dengizi Ruhiyati va Yevropa Mahoratining Sof Ifodasi. Toshkent City.">
+  <meta name="twitter:image" content="https://sdllhrahimov-cpu.github.io/basilic/assets/images/hero.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+
+  <!-- Google Structured Data (JSON-LD) for Rich Google Search Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Basilic Tashkent",
+    "image": "https://sdllhrahimov-cpu.github.io/basilic/assets/images/hero.jpg",
+    "url": "https://sdllhrahimov-cpu.github.io/basilic/",
+    "telephone": "+998783338333",
+    "priceRange": "$$$$",
+    "servesCuisine": ["European", "Mediterranean", "Haute Cuisine"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "O'qchi ko'chasi 1A",
+      "addressLocality": "Tashkent City, Shaykhontokhur district",
+      "addressRegion": "Tashkent",
+      "addressCountry": "UZ"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.311081,
+      "longitude": 69.240562
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "02:00"
+      }
+    ],
+    "menu": "https://sdllhrahimov-cpu.github.io/basilic/#menu",
+    "acceptsReservations": "True"
+  }
+  </script>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 
   <!-- AOS (Animate On Scroll) CSS -->
   <link rel="stylesheet" href="css/aos.css">
@@ -35,54 +98,89 @@
           <span class="brand-location">· Tashkent</span>
         </a>
 
-        <!-- Navigation Links -->
+        <!-- Desktop Navigation Links -->
         <ul class="nav-links">
-          <li><a href="#home" class="nav-link active" data-i18n="navHome">Home</a></li>
-          <li><a href="#menu" class="nav-link" data-i18n="navMenu">Menu</a></li>
-          <li><a href="#about" class="nav-link" data-i18n="navAbout">About</a></li>
-          <li><a href="#reservations" class="nav-link" data-i18n="navReservations">Reservations</a></li>
+          <li><a href="#home" class="nav-link active" data-i18n="navHome">Bosh sahifa</a></li>
+          <li><a href="#menu" class="nav-link" data-i18n="navMenu">Menyu</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="navAbout">Biz haqimizda</a></li>
+          <li><a href="#reservations" class="nav-link" data-i18n="navReservations">Stol band qilish</a></li>
         </ul>
 
         <!-- Action Controls -->
         <div class="nav-actions">
           <!-- Language Selector -->
           <div class="lang-switcher">
-            <button class="lang-btn active" data-lang="en">EN</button>
-            <button class="lang-btn" data-lang="uz">UZ</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn active" data-lang="uz">UZ</button>
             <button class="lang-btn" data-lang="ru">RU</button>
           </div>
 
           <!-- Reserve CTA -->
-          <a href="#reservations" class="btn btn-primary btn-sm" data-i18n="btnReserve">Reserve a Table</a>
+          <a href="#reservations" class="btn btn-primary btn-sm header-reserve-btn" data-i18n="btnReserve">Stol band qilish</a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open Navigation Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </nav>
     </div>
   </header>
+
+  <!-- Mobile Drawer / Overlay Navigation -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-wrap">
+        <span class="brand-title">Basilic</span>
+        <span class="brand-location">· Tashkent</span>
+      </div>
+      <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close Navigation Menu">&times;</button>
+    </div>
+    <div class="mobile-drawer-body">
+      <ul class="mobile-nav-links">
+        <li><a href="#home" class="mobile-nav-link" data-i18n="navHome">Bosh sahifa</a></li>
+        <li><a href="#menu" class="mobile-nav-link" data-i18n="navMenu">Menyu</a></li>
+        <li><a href="#about" class="mobile-nav-link" data-i18n="navAbout">Biz haqimizda</a></li>
+        <li><a href="#reservations" class="mobile-nav-link" data-i18n="navReservations">Stol band qilish</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <div class="lang-switcher" style="justify-content: center; margin-bottom: 1.5rem;">
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn active" data-lang="uz">UZ</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+        </div>
+        <a href="#reservations" class="btn btn-primary" style="width: 100%;" id="mobileReserveBtn" data-i18n="btnReserve">Stol band qilish</a>
+      </div>
+    </div>
+  </div>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
 
   <main>
     <!-- HOME HERO SECTION -->
     <section class="home-hero" id="home">
       <div class="container">
         <div class="hero-grid">
-          <div data-aos="fade-up" data-aos-duration="1000">
-            <span class="eyebrow" data-i18n="heroEyebrow">EST. 2024 · TASHKENT · HAUTE GASTRONOMIE</span>
+          <div data-aos="fade-up" data-aos-duration="900">
+            <span class="eyebrow" data-i18n="heroEyebrow">TOSHKENT · HAUTE GASTRONOMIE · 2024</span>
             <h1 class="display-lg hero-title" data-i18n="heroHeadline">
-              A Pure Expression of Mediterranean Soul & European Artistry.
+              O'rta Yer Dengizi Ruhiyati va Yevropa Mahoratining Sof Ifodasi.
             </h1>
             <p class="hero-subtext" data-i18n="heroSubtitle">
-              Welcome to Basilic—where seasonal provenance, quiet architectural luxury, and timeless culinary craft converge in the center of Tashkent.
+              Basilic restoraniga xush kelibsiz — bu yerda mavsumiy noz-ne'matlar, sokin me'moriy hashamat va asrlar osha sayqallangan taomlar Toshkent markazida birlashadi.
             </p>
             <div class="hero-cta-group">
-              <a href="#reservations" class="btn btn-primary" data-i18n="btnReserve">Reserve a Table</a>
-              <a href="#menu" class="btn btn-outline" data-i18n="btnMenu">Explore Menu</a>
+              <a href="#reservations" class="btn btn-primary" data-i18n="btnReserve">Stol band qilish</a>
+              <a href="#menu" class="btn btn-outline" data-i18n="btnMenu">Menyuni ko'rish</a>
             </div>
           </div>
 
-          <div class="hero-img-frame" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+          <div class="hero-img-frame" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150">
             <img src="assets/images/hero.jpg" alt="Basilic Panoramic Dining Hall" class="hero-img">
             <div class="hero-img-caption">
-              <span>Main Dining Room · Architectural Panorama</span>
-              <span>Tashkent City</span>
+              <span data-i18n="heroCaptionRoom">Asosiy Zal · Arxitektura Panoramasi</span>
+              <span data-i18n="heroCaptionCity">Toshkent City</span>
             </div>
           </div>
         </div>
@@ -93,13 +191,13 @@
     <section class="section-padding pillars-section" id="pillars">
       <div class="container" data-aos="fade-up">
         <div class="section-head">
-          <span class="eyebrow">OUR FOUNDATION</span>
-          <h2 class="headline-lg">The Four Pillars of Basilic</h2>
+          <span class="eyebrow" data-i18n="pillarsEyebrow">BIZNING POYDEVOR</span>
+          <h2 class="headline-lg" data-i18n="pillarsTitle">Basilic Restoranining To'rtta Ustuni</h2>
         </div>
       </div>
       <div class="container">
         <div class="pillars-grid" id="pillarsGrid">
-          <!-- Populated dynamically via js/app.js with data-aos animations -->
+          <!-- Populated dynamically via js/app.js -->
         </div>
       </div>
     </section>
@@ -108,90 +206,26 @@
     <section class="section-padding highlights-section" id="highlights">
       <div class="container">
         <div class="section-head" data-aos="fade-up">
-          <span class="eyebrow">SIGNATURE CREATIONS</span>
-          <h2 class="headline-lg">Curated Highlights</h2>
-          <p class="body-md">Selected tasting courses honoring seasonal harvests and impeccable European technique.</p>
+          <span class="eyebrow" data-i18n="highlightsEyebrow">MUALLIFLIK ASARLARI</span>
+          <h2 class="headline-lg" data-i18n="highlightsTitle">Saralangan Taomlar</h2>
+          <p class="body-md" data-i18n="highlightsSubtitle">Yil fasllari ne'matlari va mukammal Yevropa texnikasini aks ettiruvchi maxsus taomlar to'plami.</p>
         </div>
 
-        <div class="highlights-grid">
-          <!-- Burrata -->
-          <div class="highlight-item" data-aos="fade-up" data-aos-delay="100">
-            <img src="assets/images/burrata.jpg" alt="Burrata di Puglia" class="highlight-thumb">
-            <div>
-              <div class="highlight-meta">
-                <h3 class="highlight-title">Burrata di Puglia</h3>
-                <span class="price-tag">180 000 UZS</span>
-              </div>
-              <p class="highlight-desc">Creamy artisanal Pugliese burrata, heirloom tomatoes, aged balsamic reduction, and fresh sweet basil leaves.</p>
-              <div class="highlight-tags">
-                <span class="tag-badge">[V]</span>
-                <span class="tag-badge">[GF]</span>
-                <span class="tag-badge">Chef's Choice</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Chilean Sea Bass -->
-          <div class="highlight-item" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/images/seabass.jpg" alt="Chilean Sea Bass" class="highlight-thumb">
-            <div>
-              <div class="highlight-meta">
-                <h3 class="highlight-title">Chilean Sea Bass</h3>
-                <span class="price-tag">460 000 UZS</span>
-              </div>
-              <p class="highlight-desc">Glazed sea bass fillet, white miso reduction, wild asparagus spears, and cold-pressed citrus-olive emulsion.</p>
-              <div class="highlight-tags">
-                <span class="tag-badge">[GF]</span>
-                <span class="tag-badge">Wild Harvest</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Australian Prime Ribeye -->
-          <div class="highlight-item" data-aos="fade-up" data-aos-delay="300">
-            <img src="assets/images/ribeye.jpg" alt="Australian Prime Ribeye" class="highlight-thumb">
-            <div>
-              <div class="highlight-meta">
-                <h3 class="highlight-title">Australian Prime Ribeye 300g</h3>
-                <span class="price-tag">490 000 UZS</span>
-              </div>
-              <p class="highlight-desc">28-day dry-aged Australian grain-fed ribeye prepared in our charcoal Josper oven, roasted garlic, and rosemary sprig.</p>
-              <div class="highlight-tags">
-                <span class="tag-badge">Josper Grill</span>
-                <span class="tag-badge">Dry-Aged</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Signature Pavlova -->
-          <div class="highlight-item" data-aos="fade-up" data-aos-delay="400">
-            <img src="assets/images/pavlova.jpg" alt="Signature Pavlova" class="highlight-thumb">
-            <div>
-              <div class="highlight-meta">
-                <h3 class="highlight-title">Signature Pavlova</h3>
-                <span class="price-tag">135 000 UZS</span>
-              </div>
-              <p class="highlight-desc">Crisp meringue shell, Madagascar vanilla mascarpone chantilly, forest berries, passionfruit coulis, and gold flakes.</p>
-              <div class="highlight-tags">
-                <span class="tag-badge">[V]</span>
-                <span class="tag-badge">[GF]</span>
-                <span class="tag-badge">Pastry Atelier</span>
-              </div>
-            </div>
-          </div>
+        <div class="highlights-grid" id="highlightsGrid">
+          <!-- Populated dynamically via js/app.js -->
         </div>
       </div>
     </section>
 
     <!-- EXECUTIVE CHEF QUOTE SECTION -->
-    <section class="chef-quote-section" data-aos="fade-in" data-aos-duration="1200">
+    <section class="chef-quote-section" data-aos="fade-in" data-aos-duration="1000">
       <div class="container">
         <div class="quote-wrap">
           <blockquote class="quote-text" data-i18n="chefQuote">
-            “Great cuisine is not about masking ingredients; it is about having the courage to reveal their truest character.”
+            “Buyuk kulinariya ingredientlarni yashirish emas; balki ularning asl tabiatini jasorat bilan ochib berish san'atidir.”
           </blockquote>
           <div class="quote-author" data-i18n="chefAuthor">
-            Executive Chef Marco V. · European Three-Star Heritage
+            Bosh Oshpaz Marco V. · Yevropa Michelin Maktabi
           </div>
         </div>
       </div>
@@ -201,31 +235,31 @@
     <section class="section-padding gallery-section" id="atmosphere">
       <div class="container">
         <div class="section-head" data-aos="fade-up">
-          <span class="eyebrow">THE SANCTUARY</span>
-          <h2 class="headline-lg">Quiet Luxury & Spatial Harmony</h2>
-          <p class="body-md">Architectural stone, custom walnut fixtures, and acoustic tranquility.</p>
+          <span class="eyebrow" data-i18n="sanctuaryEyebrow">SOKIN MAKON</span>
+          <h2 class="headline-lg" data-i18n="sanctuaryTitle">Vazmin Hashamat & Fazo Uyg'unligi</h2>
+          <p class="body-md" data-i18n="sanctuarySubtitle">Tabiiy tosh arxitekturasi, maxsus yong'oq daraxti bezaklari va akustik osoyishtalik.</p>
         </div>
 
         <div class="asymmetric-gallery">
-          <div class="gallery-card" data-aos="fade-right" data-aos-duration="1000">
+          <div class="gallery-card" data-aos="fade-right" data-aos-duration="900">
             <img src="assets/images/lounge.jpg" alt="Emerald Velvet Lounge Bar">
             <div class="gallery-caption">
               <div>
-                <strong style="display: block; font-family: var(--font-serif); font-size: 1.1rem;">Emerald Velvet Lounge & Cellar</strong>
-                <span style="font-size: 0.78rem; color: var(--color-text-secondary);">Curated spirits, vintage Coravin allocations & vinyl jazz</span>
+                <strong style="display: block; font-family: var(--font-serif); font-size: 1.1rem;" data-i18n="loungeTitle">Emerald Velvet Lounge & Organik Choy Saloni</strong>
+                <span style="font-size: 0.78rem; color: var(--color-text-secondary);" data-i18n="loungeDesc">Organik o'tli damlamalar, mualliflik mokteyllari va jonli vinil jaz</span>
               </div>
-              <span class="label-sm">Salons</span>
+              <span class="label-sm" data-i18n="loungeBadge">Salonlar</span>
             </div>
           </div>
 
-          <div class="gallery-card" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150">
+          <div class="gallery-card" data-aos="fade-left" data-aos-duration="900" data-aos-delay="120">
             <img src="assets/images/hero.jpg" alt="Panoramic Main Dining Room">
             <div class="gallery-caption">
               <div>
-                <strong style="display: block; font-family: var(--font-serif); font-size: 1.1rem;">Panoramic Dining Salon</strong>
-                <span style="font-size: 0.78rem; color: var(--color-text-secondary);">Generous 12-column spacing and discreet table appointments</span>
+                <strong style="display: block; font-family: var(--font-serif); font-size: 1.1rem;" data-i18n="diningSalonTitle">Panoramik Asosiy Zal</strong>
+                <span style="font-size: 0.78rem; color: var(--color-text-secondary);" data-i18n="diningSalonDesc">Keng 12 ustunli fazo va mehmonlar uchun alohida ehtiromli joylashuv</span>
               </div>
-              <span class="label-sm">Dining Room</span>
+              <span class="label-sm" data-i18n="diningSalonBadge">Asosiy Zal</span>
             </div>
           </div>
         </div>
@@ -235,71 +269,71 @@
     <!-- PRIVATE DINING CALLOUT -->
     <section class="section-padding" style="background: var(--color-canvas-alt); border-bottom: 1px solid var(--border-hairline);">
       <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+        <div class="split-feature-grid">
           <div data-aos="fade-right">
-            <span class="eyebrow">EXCLUSIVE SALONS</span>
-            <h2 class="headline-lg" style="margin-bottom: 1.5rem;" data-i18n="privateDiningTitle">Private Dining & Executive Salons</h2>
+            <span class="eyebrow" data-i18n="privateEyebrow">VIP SALONLAR</span>
+            <h2 class="headline-lg" style="margin-bottom: 1.5rem;" data-i18n="privateDiningTitle">Shaxsiy VIP Zallar va Tadbirlar</h2>
             <p class="body-lg" style="margin-bottom: 2rem;" data-i18n="privateDiningDesc">
-              Bespoke tasting courses, sommelier cellar pairings, and discreet accommodations tailored for high-level delegations, celebrations, and intimate gatherings.
+              Maxsus degustatsiya taomnomasi, mualliflik organik ichimliklari va rasmiy delegatsiyalar, oilaviy bayramlar uchun mo'ljallangan yopiq shinam salonlar.
             </p>
-            <a href="#reservations" class="btn btn-primary">Discover Private Dining →</a>
+            <a href="#reservations" class="btn btn-primary" data-i18n="btnDiscoverPrivate">VIP Zallarni Ko'rish →</a>
           </div>
-          <div style="border: 1px solid var(--border-hairline); padding: 12px; background: #FFFFFF;" data-aos="fade-left" data-aos-delay="150">
-            <img src="assets/images/lounge.jpg" alt="Private Dining Salon" style="width: 100%; height: 360px; object-fit: cover; display: block;">
+          <div class="feature-img-frame" data-aos="fade-left" data-aos-delay="150">
+            <img src="assets/images/lounge.jpg" alt="Private Dining Salon" class="feature-img">
           </div>
         </div>
       </div>
     </section>
 
-    <!-- COMPREHENSIVE DEDICATED MENU PAGE -->
+    <!-- COMPREHENSIVE DEDICATED MENU SECTION -->
     <section class="section-padding" id="menu">
       <div class="container">
         <div class="section-head centered" data-aos="fade-up">
-          <span class="eyebrow" data-i18n="menuEyebrow">GASTRONOMIE EUROPÉENNE</span>
-          <h2 class="display-lg" data-i18n="menuTitle">Our Menu</h2>
+          <span class="eyebrow" data-i18n="menuEyebrow">YEVROPA GASTRONOMIYASI</span>
+          <h2 class="display-lg" data-i18n="menuTitle">Bizning Menyu</h2>
           <p class="body-lg" style="max-width: 620px; margin: 1rem auto 0 auto;" data-i18n="menuSubtitle">
-            Thoughtfully crafted dishes using exceptional seasonal ingredients and centuries-old culinary heritage.
+            Nodir mavsumiy mahsulotlar va asriy an'analar asosida mehr bilan tayyorlangan taomlar to'plami.
           </p>
         </div>
 
         <!-- Degustation Feature Box -->
-        <div class="degustation-banner" data-aos="fade-up" data-aos-duration="1000">
+        <div class="degustation-banner" data-aos="fade-up" data-aos-duration="900">
           <div>
-            <span class="label-md">EXECUTIVE TASTING EXPERIENCE</span>
-            <h3 class="headline-md" style="margin: 0.5rem 0;" data-i18n="degustationTitle">Degustation 6-Course Menu</h3>
-            <p class="body-md" data-i18n="degustationSubtitle">Curated by the Executive Chef with Optional Sommelier Cellar Pairing</p>
+            <span class="label-md" data-i18n="degustationEyebrow">MAHSUS DEGUSTATSIYA TAJRIBASI</span>
+            <h3 class="headline-md" style="margin: 0.5rem 0;" data-i18n="degustationTitle">6 Bosqichli Degustatsiya Menyusi</h3>
+            <p class="body-md" data-i18n="degustationSubtitle">Bosh Oshpaz tavsiyasi va mualliflik organik o'tli ichimliklar uyg'unligida</p>
             <ul class="degustation-courses">
-              <li>Pugliese Burrata & Heirloom Tartare</li>
-              <li>Handmade Black Truffle Tagliolini</li>
-              <li>Wild Chilean Sea Bass Miso Glacé</li>
-              <li>Charcoal Josper Prime Ribeye 120g</li>
-              <li>Artisanal Bronte Pistachio Granita</li>
-              <li>Signature Gold Leaf Pavlova Meringue</li>
+              <li data-i18n="degustationC1">Pugliese Burratasi & Pomidor Tartari</li>
+              <li data-i18n="degustationC2">Qo'lda Tayyorlangan Qora Truffelli Tagliolini</li>
+              <li data-i18n="degustationC3">Yovvoyi Chili Sibasi Miso Glace</li>
+              <li data-i18n="degustationC4">Josper Ko'mir Pechidagi Prime Ribeye 120g</li>
+              <li data-i18n="degustationC5">Sitsiliya Bronte Pistali Granitasi</li>
+              <li data-i18n="degustationC6">Mualliflik Oltin Varoqli Pavlova Bezesi</li>
             </ul>
           </div>
-          <div style="text-align: right;">
-            <div style="font-family: var(--font-serif); font-size: 2.2rem; color: var(--color-charcoal);" data-i18n="degustationPrice">850 000 UZS</div>
-            <span class="body-sm" style="display: block; margin-bottom: 1.5rem;">per guest · wine pairing optional</span>
-            <a href="#reservations" class="btn btn-primary btn-sm">Reserve Degustation</a>
+          <div class="degustation-pricing-col">
+            <div class="degustation-price-num" data-i18n="degustationPrice">850 000 UZS</div>
+            <span class="body-sm" style="display: block; margin-bottom: 1.5rem;" data-i18n="degustationNote">har bir mehmon uchun · noalkogol organik ichimliklar to'plami bilan</span>
+            <a href="#reservations" class="btn btn-primary btn-sm" data-i18n="btnReserveDegustation">Degustatsiyani Band Qilish</a>
           </div>
         </div>
 
         <!-- Sticky Filter Tabs -->
         <div class="menu-sticky-nav" data-aos="fade-up">
           <div class="menu-tabs-bar">
-            <button class="menu-tab-btn active" data-category="all" data-i18n="filterAll">All Courses</button>
-            <button class="menu-tab-btn" data-category="starters" data-i18n="filterStarters">Starters & Crudo</button>
-            <button class="menu-tab-btn" data-category="seafood" data-i18n="filterSeafood">Seafood & Fish</button>
-            <button class="menu-tab-btn" data-category="grill" data-i18n="filterGrill">Josper Grill & Steaks</button>
+            <button class="menu-tab-btn active" data-category="all" data-i18n="filterAll">Barchasi</button>
+            <button class="menu-tab-btn" data-category="starters" data-i18n="filterStarters">Gazaklar & Krudo</button>
+            <button class="menu-tab-btn" data-category="seafood" data-i18n="filterSeafood">Dengiz Mahsulotlari</button>
+            <button class="menu-tab-btn" data-category="grill" data-i18n="filterGrill">Josper Gril & Steyklar</button>
             <button class="menu-tab-btn" data-category="pasta" data-i18n="filterPasta">Pasta & Risotto</button>
-            <button class="menu-tab-btn" data-category="mains" data-i18n="filterMains">Main Courses</button>
-            <button class="menu-tab-btn" data-category="desserts" data-i18n="filterDesserts">Pastry & Desserts</button>
-            <button class="menu-tab-btn" data-category="drinks" data-i18n="filterDrinks">Bar & Cellar</button>
+            <button class="menu-tab-btn" data-category="mains" data-i18n="filterMains">Asosiy Taomlar</button>
+            <button class="menu-tab-btn" data-category="desserts" data-i18n="filterDesserts">Desertlar</button>
+            <button class="menu-tab-btn" data-category="drinks" data-i18n="filterDrinks">Organik Ichimliklar & Choy</button>
           </div>
         </div>
 
         <!-- Course Ledger Grid -->
-        <div class="menu-courses-grid" id="menuFolioGrid" style="margin-top: 3rem;">
+        <div class="menu-courses-grid" id="menuFolioGrid">
           <!-- Dynamically populated via js/app.js -->
         </div>
       </div>
@@ -309,22 +343,22 @@
     <section class="section-padding" style="background: var(--color-surface-dim); border-top: 1px solid var(--border-hairline); border-bottom: 1px solid var(--border-hairline);" id="about">
       <div class="container">
         <div class="section-head" data-aos="fade-up">
-          <span class="eyebrow">HERITAGE & CRAFT</span>
-          <h2 class="display-lg">A Symphony of Mediterranean Soul & European Precision.</h2>
-          <p class="body-lg" style="margin-top: 1rem;">Founded on the belief that dining is an art form of hospitality, intention, and seasonal purity.</p>
+          <span class="eyebrow" data-i18n="aboutEyebrow">MEROS VA MAHORAT</span>
+          <h2 class="display-lg" data-i18n="aboutTitle">O'rta Yer Dengizi Ruhiyati va Yevropa Aniqligi Uyg'unligi.</h2>
+          <p class="body-lg" style="margin-top: 1rem;" data-i18n="aboutSubtitle">Taom tanovuli mehmondo'stlik, samimiyat va toza ne'matlar san'ati ekanligiga ishonamiz.</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem;">
-          <div style="border: 1px solid var(--border-hairline); padding: 12px; background: #FFFFFF;" data-aos="fade-right">
-            <img src="assets/images/hero.jpg" alt="Basilic Interior Architecture" style="width: 100%; height: 420px; object-fit: cover; display: block;">
+        <div class="split-feature-grid" style="margin-bottom: 2rem;">
+          <div class="feature-img-frame" data-aos="fade-right">
+            <img src="assets/images/hero.jpg" alt="Basilic Interior Architecture" class="feature-img">
           </div>
           <div data-aos="fade-left" data-aos-delay="150">
-            <h3 class="headline-md" style="margin-bottom: 1.2rem;">Our Story</h3>
-            <p class="body-md" style="margin-bottom: 1.2rem;">
-              Basilic was conceived as an unhurried sanctuary in the energetic heart of Tashkent. Drawing inspiration from Mediterranean coastal villas, Parisian culinary discipline, and high-modern architectural restraint, our space provides a calm refuge for guests who appreciate exacting craft.
+            <h3 class="headline-md" style="margin-bottom: 1.2rem;" data-i18n="aboutStoryTitle">Bizning Tariximiz</h3>
+            <p class="body-md" style="margin-bottom: 1.2rem;" data-i18n="aboutStoryP1">
+              Basilic Toshkentning qaynoq markazida shoshilmas va sokin maskan sifatida barpo etildi. O'rta yer dengizi sohil villalari, Parij oshxona intizomi va zamonaviy arxitektura vazminligidan ilhomlangan makonimiz nozik did egalari uchun qulay boshpana hisoblanadi.
             </p>
-            <p class="body-md">
-              From our custom charcoal Josper ovens to temperature-regulated wine cellars, every detail is engineered to let ingredients express their highest natural state without compromise.
+            <p class="body-md" data-i18n="aboutStoryP2">
+              Maxsus ko'mirli Josper pechlaridan tortib, harorati nazorat qilinadigan organik choy xonalarigacha — har bir detal ingredientlarning tabiiy fazilatlarini eng yuqori darajada ochib berish uchun moslangan.
             </p>
           </div>
         </div>
@@ -335,49 +369,49 @@
     <section class="section-padding" id="reservations">
       <div class="container">
         <div class="section-head centered" data-aos="fade-up">
-          <span class="eyebrow" data-i18n="resEyebrow">ONLINE CONCIERGE</span>
-          <h2 class="display-lg" data-i18n="resTitle">Reserve a Table</h2>
+          <span class="eyebrow" data-i18n="resEyebrow">ONLAYN KONSYERJ</span>
+          <h2 class="display-lg" data-i18n="resTitle">Stol Band Qilish</h2>
           <p class="body-lg" style="max-width: 660px; margin: 1rem auto 0 auto;" data-i18n="resSubtitle">
-            We look forward to welcoming you. For parties larger than 8 or bespoke private dining inquiries, our concierge is at your service.
+            Sizni kutib olishdan mamnunmiz. 8 kishidan ortiq kompaniyalar yoki VIP xonalar uchun konsyerjimiz xizmatingizda.
           </p>
         </div>
 
         <div class="reservation-layout">
           <!-- Left Column: Booking Form -->
-          <div class="res-form-col" data-aos="fade-right" data-aos-duration="1000">
+          <div class="res-form-col" data-aos="fade-right" data-aos-duration="900">
             <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2rem; border-bottom: 1px solid var(--border-hairline); padding-bottom: 1rem;">
-              <span class="label-md">STEP 1 OF 2</span>
-              <span class="body-sm" data-i18n="resStep1">Table & Schedule Selection</span>
+              <span class="label-md" data-i18n="resStepCounter">1-BOSQICH (JAMI 2)</span>
+              <span class="body-sm" data-i18n="resStep1">Stol va Vaqtni Tanlash</span>
             </div>
 
             <form id="conciergeResForm">
-              <input type="hidden" id="inputGuests" value="2 Guests">
+              <input type="hidden" id="inputGuests" value="2 Mehmon">
               <input type="hidden" id="inputTime" value="19:30">
 
               <!-- Guests Selector -->
               <div class="form-group">
-                <label class="form-label" data-i18n="resGuestsLabel">Number of Guests</label>
+                <label class="form-label" data-i18n="resGuestsLabel">Mehmonlar Soni</label>
                 <div class="pill-grid">
-                  <button type="button" class="pill-btn guest-pill" data-val="1 Guest">1 Guest</button>
-                  <button type="button" class="pill-btn guest-pill active" data-val="2 Guests">2 Guests</button>
-                  <button type="button" class="pill-btn guest-pill" data-val="3 Guests">3 Guests</button>
-                  <button type="button" class="pill-btn guest-pill" data-val="4 Guests">4 Guests</button>
-                  <button type="button" class="pill-btn guest-pill" data-val="5 Guests">5 Guests</button>
-                  <button type="button" class="pill-btn guest-pill" data-val="6 Guests">6 Guests</button>
-                  <button type="button" class="pill-btn guest-pill" data-val="Large Party 8+">8+ Guests</button>
+                  <button type="button" class="pill-btn guest-pill" data-val="1">1 Mehmon</button>
+                  <button type="button" class="pill-btn guest-pill active" data-val="2">2 Mehmon</button>
+                  <button type="button" class="pill-btn guest-pill" data-val="3">3 Mehmon</button>
+                  <button type="button" class="pill-btn guest-pill" data-val="4">4 Mehmon</button>
+                  <button type="button" class="pill-btn guest-pill" data-val="5">5 Mehmon</button>
+                  <button type="button" class="pill-btn guest-pill" data-val="6">6 Mehmon</button>
+                  <button type="button" class="pill-btn guest-pill" data-val="8">8+ Mehmon</button>
                 </div>
               </div>
 
               <!-- Date Picker -->
               <div class="form-group">
-                <label class="form-label" for="resDate" data-i18n="resDateLabel">Select Date</label>
+                <label class="form-label" for="resDate" data-i18n="resDateLabel">Tashrif Sanasi</label>
                 <input type="date" id="resDate" class="form-input" required>
               </div>
 
               <!-- Time Slot Grid -->
               <div class="form-group">
-                <label class="form-label" data-i18n="resTimeLabel">Dining Time Slot</label>
-                <span style="font-size: 0.72rem; color: var(--color-sage); display: block; margin-bottom: 6px;">Dinner & Evening Service</span>
+                <label class="form-label" data-i18n="resTimeLabel">Qulay Vaqt Oralig'i</label>
+                <span style="font-size: 0.72rem; color: var(--color-sage); display: block; margin-bottom: 6px;" data-i18n="resTimeNote">Kechki xizmat va samimiy uchrashuvlar</span>
                 <div class="time-slots-grid">
                   <button type="button" class="time-btn" data-time="18:00">18:00</button>
                   <button type="button" class="time-btn" data-time="18:30">18:30</button>
@@ -392,44 +426,44 @@
 
               <!-- Seating Preference -->
               <div class="form-group">
-                <label class="form-label" for="resZone" data-i18n="resZoneLabel">Seating Preference</label>
+                <label class="form-label" for="resZone" data-i18n="resZoneLabel">Zal Tanlovi</label>
                 <select id="resZone" class="form-select">
-                  <option value="Main Dining Room (Panoramic)">Main Dining Room (Panoramic)</option>
-                  <option value="Olive Garden Conservatory">Olive Garden Conservatory</option>
-                  <option value="Emerald Lounge & Bar">Emerald Lounge & Bar</option>
-                  <option value="Chef's Counter">Chef's Tasting Counter</option>
+                  <option value="Main Dining Room" data-i18n-option="zoneMain">Asosiy Zal (Panoramik)</option>
+                  <option value="Olive Garden Conservatory" data-i18n-option="zoneGarden">Zaytun Bog'i Oranjereyasi</option>
+                  <option value="Emerald Lounge & Bar" data-i18n-option="zoneLounge">Emerald Lounge & Choy Saloni</option>
+                  <option value="Chef's Counter" data-i18n-option="zoneCounter">Oshpazning Degustatsiya Stoli</option>
                 </select>
               </div>
 
               <!-- Guest Name & Phone -->
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+              <div class="form-row-2col">
                 <div class="form-group">
-                  <label class="form-label" for="resGuestName" data-i18n="resNameLabel">Full Name</label>
-                  <input type="text" id="resGuestName" class="form-input" placeholder="e.g. Jasur Alimov" required>
+                  <label class="form-label" for="resGuestName" data-i18n="resNameLabel">Ism va Familiyangiz</label>
+                  <input type="text" id="resGuestName" class="form-input" data-i18n-placeholder="resNamePlaceholder" placeholder="Masalan, Jasur Alimov" required>
                 </div>
                 <div class="form-group">
-                  <label class="form-label" for="resGuestPhone" data-i18n="resPhoneLabel">Phone Number</label>
-                  <input type="tel" id="resGuestPhone" class="form-input" placeholder="+998 (90) 000-00-00" required>
+                  <label class="form-label" for="resGuestPhone" data-i18n="resPhoneLabel">Telefon Raqamingiz</label>
+                  <input type="tel" id="resGuestPhone" class="form-input" data-i18n-placeholder="resPhonePlaceholder" placeholder="+998 (90) 000-00-00" required>
                 </div>
               </div>
 
               <!-- Notes -->
               <div class="form-group">
-                <label class="form-label" for="resNotes" data-i18n="resNotesLabel">Occasion & Dietary Preferences</label>
-                <textarea id="resNotes" class="form-textarea" rows="2" placeholder="Birthday, anniversary, quiet window table, dietary notes..."></textarea>
+                <label class="form-label" for="resNotes" data-i18n="resNotesLabel">Bayram Munosabati va Maxsus Istaklar</label>
+                <textarea id="resNotes" class="form-textarea" rows="2" data-i18n-placeholder="resNotesPlaceholder" placeholder="Tug'ilgan kun, yubiley, sokin deraza yonidagi stol, parhez istaklari..."></textarea>
               </div>
 
               <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="resSubmitBtn">
-                Request a Reservation →
+                Band Qilish So'rovini Yuborish →
               </button>
             </form>
           </div>
 
           <!-- Right Column: Concierge Info -->
-          <div class="res-concierge-col" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150">
+          <div class="res-concierge-col" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
             <div>
-              <span class="eyebrow">HOSPITALITY PROTOCOL</span>
-              <h3 class="headline-md" style="margin-bottom: 1.5rem;">Direct Concierge Desk</h3>
+              <span class="eyebrow" data-i18n="resProtocolEyebrow">MEHMONDO'STLIK QOIDALARI</span>
+              <h3 class="headline-md" style="margin-bottom: 1.5rem;" data-i18n="resDeskTitle">To'g'ridan-To'g'ri Konsyerj Xizmati</h3>
               
               <div style="margin-bottom: 2rem;">
                 <img src="assets/images/hero.jpg" alt="Concierge Desk" style="width: 100%; height: 220px; object-fit: cover; border: 1px solid var(--border-hairline);">
@@ -437,31 +471,31 @@
 
               <div style="display: flex; flex-direction: column; gap: 1.2rem; margin-bottom: 2rem;">
                 <div>
-                  <span class="label-sm">Location</span>
-                  <div style="font-size: 0.92rem; font-weight: 500;">O'qchi Street 1A, Tashkent City, Shaykhontokhur district, Tashkent</div>
+                  <span class="label-sm" data-i18n="resLocLabel">Manzil</span>
+                  <div style="font-size: 0.88rem; font-weight: 500;" data-i18n="resLocVal">O'qchi ko'chasi 1A, Toshkent City, Shayxontohur tumani, Toshkent</div>
                 </div>
                 <div>
-                  <span class="label-sm">Telephone</span>
-                  <div style="font-size: 0.92rem; font-weight: 500;">+998 (78) 333-83-33</div>
+                  <span class="label-sm" data-i18n="resTelLabel">Telefon</span>
+                  <div style="font-size: 0.88rem; font-weight: 500;">+998 (78) 333-83-33</div>
                 </div>
                 <div>
-                  <span class="label-sm">Email</span>
-                  <div style="font-size: 0.92rem; font-weight: 500;">concierge@basilic.uz</div>
+                  <span class="label-sm" data-i18n="resEmailLabel">Elektron Pochta</span>
+                  <div style="font-size: 0.88rem; font-weight: 500;">concierge@basilic.uz</div>
                 </div>
                 <div>
-                  <span class="label-sm">Operating Hours</span>
-                  <div style="font-size: 0.92rem; font-weight: 500;">Monday — Sunday: 08:00 to 02:00 (Kitchen closes at 00:30)</div>
+                  <span class="label-sm" data-i18n="resHoursLabel">Ish Vaqti</span>
+                  <div style="font-size: 0.88rem; font-weight: 500;" data-i18n="resHoursVal">Dushanba — Yakshanba: 08:00 dan 02:00 gacha (Oshxona 00:30 gacha)</div>
                 </div>
               </div>
             </div>
 
             <!-- Etiquette Card -->
             <div class="etiquette-card">
-              <h4>Dining Etiquette & Notes</h4>
+              <h4 data-i18n="resEtiquetteTitle">Restoran Odobi va Eslatmalar</h4>
               <ul>
-                <li>· Smart casual to formal attire appreciated (athletic wear discouraged).</li>
-                <li>· Table holding policy: Reservations are held for 20 minutes past booking.</li>
-                <li>· Soft live acoustic and vinyl jazz from 19:30 onwards.</li>
+                <li data-i18n="resEtiquette1">· Smart casual yoki rasmiy kiyinish uslubi tavsiya etiladi (sport kiyimlari taqiqlanadi).</li>
+                <li data-i18n="resEtiquette2">· Stolni ushlab turish tartibi: Bron qilingan vaqtdan so'ng 20 daqiqa kutiladi.</li>
+                <li data-i18n="resEtiquette3">· Har kuni soat 19:30 dan boshlab sokin jonli akustik va vinil jaz musiqasi.</li>
               </ul>
             </div>
           </div>
@@ -474,18 +508,18 @@
   <div class="modal-overlay" id="resModalOverlay">
     <div class="modal-window">
       <button class="modal-close" id="modalCloseBtn">&times;</button>
-      <span class="label-sm" style="display: block; margin-bottom: 1rem;">ONLINE CONCIERGE CONFIRMATION</span>
-      <h3 class="headline-md" style="margin-bottom: 1rem;" data-i18n="successTitle">Reservation Received</h3>
+      <span class="label-sm" style="display: block; margin-bottom: 1rem;" data-i18n="modalEyebrow">ONLAYN KONSYERJ TASDIQLOVI</span>
+      <h3 class="headline-md" style="margin-bottom: 1rem;" data-i18n="successTitle">Stol Muvaffaqiyatli Band Qilindi</h3>
       <p id="modalConfirmationDetails" class="body-md" style="margin-bottom: 2rem;" data-i18n="successDesc">
-        Thank you. Our hospitality concierge will contact you promptly to finalize your table arrangements.
+        Rahmat. Bosh konsyerjimiz tez orada siz bilan bog'lanib, barcha tafsilotlarni tasdiqlaydi.
       </p>
-      <button class="btn btn-primary" id="modalDoneBtn" style="width: 100%;">Understood</button>
+      <button class="btn btn-primary" id="modalDoneBtn" style="width: 100%;" data-i18n="modalBtnUnderstood">Tushundim</button>
     </div>
   </div>
 
   <!-- TOAST BAR -->
   <div class="toast-bar" id="toastBar">
-    Notification
+    Bildirishnoma
   </div>
 
   <!-- SITE FOOTER -->
@@ -497,50 +531,50 @@
             <span class="brand-title">Basilic</span>
             <span class="brand-location">· Tashkent</span>
           </div>
-          <p class="body-sm" style="line-height: 1.8;">
-            A sanctuary of European three-star Michelin gastronomy and Mediterranean hospitality in the center of Tashkent City.
+          <p class="body-sm" style="line-height: 1.8;" data-i18n="footerAbout">
+            Toshkent City markazida Yevropa uch yulduzli Michelin gastronomiyasi va O'rta yer dengizi mehmondo'stligi maskani.
           </p>
         </div>
 
         <div class="footer-col">
-          <h4>Navigation</h4>
+          <h4 data-i18n="footerNavTitle">Bo'limlar</h4>
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#reservations">Reservations</a></li>
+            <li><a href="#home" data-i18n="navHome">Bosh sahifa</a></li>
+            <li><a href="#menu" data-i18n="navMenu">Menyu</a></li>
+            <li><a href="#about" data-i18n="navAbout">Biz haqimizda</a></li>
+            <li><a href="#reservations" data-i18n="navReservations">Stol band qilish</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Hours</h4>
+          <h4 data-i18n="footerHoursTitle">Ish Vaqti</h4>
           <ul>
-            <li>Monday — Sunday: 08:00 — 02:00</li>
-            <li>Breakfast: 08:00 — 12:00</li>
-            <li>Lunch: 12:00 — 16:00</li>
-            <li>Dinner: 18:00 — 00:30</li>
+            <li data-i18n="footerHours1">Dushanba — Yakshanba: 08:00 — 02:00</li>
+            <li data-i18n="footerHours2">Nonushta: 08:00 — 12:00</li>
+            <li data-i18n="footerHours3">Tushlik: 12:00 — 16:00</li>
+            <li data-i18n="footerHours4">Kechki ovqat: 18:00 — 00:30</li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Concierge & Desk</h4>
+          <h4 data-i18n="footerDeskTitle">Konsyerj & Aloqa</h4>
           <ul>
-            <li>O'qchi Street 1A, Tashkent City</li>
+            <li data-i18n="resLocVal">O'qchi ko'chasi 1A, Tashkent City</li>
             <li>+998 (78) 333-83-33</li>
             <li>concierge@basilic.uz</li>
             <li style="margin-top: 0.5rem; display: flex; gap: 15px;">
-              <a href="#" style="font-weight: 600;">Instagram</a>
-              <a href="#" style="font-weight: 600;">Telegram</a>
+              <a href="#" style="font-weight: 500;">Instagram</a>
+              <a href="#" style="font-weight: 500;">Telegram</a>
             </li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <div>&copy; 2026 BASILIC Tashkent. All rights reserved.</div>
+        <div data-i18n="footerRights">&copy; 2026 BASILIC Toshkent. Barcha huquqlar himoyalangan.</div>
         <div style="display: flex; gap: 24px;">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Hospitality</a>
+          <a href="#" data-i18n="footerPrivacy">Maxfiylik Siyosati</a>
+          <a href="#" data-i18n="footerTerms">Mehmondo'stlik Qoidalari</a>
         </div>
       </div>
     </div>
